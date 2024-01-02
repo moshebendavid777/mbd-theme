@@ -1,0 +1,263 @@
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 2rem 0;
+  position: relative;
+  margin-top: 0;
+
+  .footer__contact__text {
+    color: $white !important;
+    font-size: 80px !important;
+    font-weight: 800;
+    text-transform: initial !important;
+
+    @include bkp("sm") {
+      font-size: 48px !important;
+      text-align: center;
+    }
+
+    @include bkp("md") {
+      font-size: 45px !important;
+      text-align: center;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &__getin {
+      font-size: 14px;
+    }
+
+    &--icon {
+      color: #fff !important;
+      border: 1px solid;
+      border-radius: 100%;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      font-size: 12px;
+      transition: 300ms ease-in;
+
+      svg {
+        transition: 300ms ease-in;
+      }
+
+      &:hover {
+        border-color: $color-1 !important;
+        svg {
+          color: $color-1;
+        }
+      }
+    }
+  }
+
+  .footer-links {
+    a {
+      color: $link;
+
+      @include bkp("sm") {
+        font-size: 13px;
+      }
+
+      &:hover {
+        color: $color-3;
+      }
+
+      svg {
+        font-size: 2rem;
+        margin-right: 8px;
+
+        @include bkp("sm") {
+          margin-right: 4px;
+        }
+
+        @include bkp("md") {
+          font-size: 1.4rem;
+        }
+
+        &.fa-facebook-f {
+          padding: 8px 11px;
+          border-radius: 50%;
+          font-size: 13px;
+
+          @include bkp("md") {
+            padding: 6px 8px;
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+
+    .nav {
+      padding: 0 1rem;
+      
+      .nav-link {
+        color: #FFFFFF !important;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    @include bkp('md') {
+      flex-direction: row;
+    }
+
+    @include bkp('sm') {
+      flex-direction: column;
+    }
+
+    &__nav {
+      display: flex;
+      justify-content: flex-end;
+
+      .nav {
+        display: flex;
+
+        .menu-item {
+          a {
+            color: $color-1;
+            font-size: 13px;
+            border-left: 1px solid;
+            padding-left: 10px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .menu-copyright-menu-container {
+      ul {
+        display: flex;
+        li {
+          a {
+            color: #fff;
+            &:before {
+              content: "|";
+              font-size: 14px;
+              font-weight: 400;
+              color: #fff;
+              padding: 0 5px;
+            }
+
+            &:hover {
+              color: $color-1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__nav-side {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__nav {
+      .nav {
+        display: flex;
+
+        .menu-item {
+          a {
+            color: $color-1;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 800;
+            padding: 0 1.2rem;
+
+            &:hover {
+              color: $color-3;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright-text {
+    font-size: 13px;
+    color: $white;
+    margin-top: 3px;
+  }
+
+  .social-nav {
+    display: flex;
+    align-items: center;
+
+    .soc-icon {
+      color: $color-3;
+      width: 26px;
+      height: 26px;
+      border-radius: 50px;
+      display: inline-block;
+      padding: 5px 8px;
+      font-size: 12px;
+      margin: 0 3px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .footer {
+    padding: 1.5rem 20px;
+    overflow: hidden;
+
+    &__nav-side {
+      display: none;
+    }
+
+    .footer__copyright {
+      font-size: 14px;
+      font-weight: 600;
+      align-items: center;
+
+      .nav {
+        padding: 0 1rem;
+        
+        .nav-link {
+          color: #FFFFFF !important;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+      }
+      }
+
+      @include bkp("md") {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        line-height: 0.5;
+        margin-bottom: 10px;
+
+        ul {
+          margin-top: 10px;
+          li {
+            &:first-child {
+              a {
+                &::before {
+                  content: '';
+                  padding: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

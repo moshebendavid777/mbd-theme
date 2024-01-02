@@ -1,0 +1,151 @@
+body > * {
+  h1 {
+    font-size: 70px !important;
+    line-height: 85px !important;
+    color: #000 !important;
+    font-weight: 900 !important;
+    margin: 10px 0 !important;
+
+    @include bkp('sm') {
+      font-size: 40px !important;
+      line-height: 55px !important;
+    }
+  }
+
+  h2 {
+    font-size: 50px !important;
+    line-height: 85px !important;
+    color: #000 !important;
+    font-weight: 900 !important;
+    margin: 10px 0 !important;
+
+    @include bkp('sm') {
+      font-size: 40px !important;
+      line-height: 55px !important;
+    }
+  }
+
+  h3 {
+    font-size: 40px !important;
+    line-height: 85px !important;
+    color: #000 !important;
+    font-weight: 900 !important;
+    margin: 10px 0 !important;
+  }
+
+  h4 {
+    font-size: 40px !important;
+    color: #000 !important;
+    font-weight: 400 !important;
+    margin: 10px 0 !important;
+  }
+
+  h5 {
+    font-size: 40px !important;
+    line-height: 1 !important;
+    color: #000 !important;
+    font-weight: 900 !important;
+    margin: 10px 0 !important;
+  }
+
+  h6 {
+    font-size: 33px !important;
+    line-height: 85px !important;
+    color: #000 !important;
+    font-weight: 700 !important;
+    margin: 10px 0 !important;
+
+    @include bkp('sm') {
+      font-size: 25px !important;
+      line-height: 35px !important;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 31px;
+    font-weight: 500;
+
+    &.has-small-font-size {
+      font-size: 14px !important;
+      line-height: 26px;
+      font-weight: 500;
+    }
+
+    &.has-medium-font-size {
+      font-size: 18px !important;
+      line-height: 31px;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    &.has-large-font-size {
+      font-size: 20px !important;
+      line-height: 28px;
+      font-weight: 700;
+    }
+
+    &.has-x-large-font-size {
+      font-size: 33px !important;
+      line-height: 28px;
+      font-weight: 700;
+    }
+
+    a {
+      font-weight: 600;
+      color: $color-1;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+   {
+    font-family: $secondary_font;
+  }
+
+  h6,
+   {
+    font-family: $primary_font;
+  }
+}
+
+
+.is-style-gradient-last-word {
+  span {
+  /* Fallback: Set a background color. */
+  background-color: $color-2;;
+
+  /* Create the gradient. */
+  background-image: linear-gradient(90deg, #083577 30%, #007aff 60%);
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+
+  /* Ensure the position is relative for pseudo-element positioning. */
+  position: relative;
+  &::after {
+  /* Content for pseudo-element */
+  content: "";
+  /* Position the pseudo-element over the last word */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  /* Apply the same gradient as background */
+  background-image: linear-gradient(90deg, #083577 30%, #007aff 60%);
+  /* Adjust z-index to place the gradient behind the text */
+  z-index: -1;
+  }
+  }
+}

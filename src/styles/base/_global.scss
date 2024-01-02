@@ -1,0 +1,23 @@
+body {
+  font-family: $primary_font;
+}
+
+a {
+  color: $link;
+}
+
+.wp-block-columns {
+  @include bkp('sm') {
+    padding: 0 15px;
+  }
+}
+
+.wp-block-columns {
+  @include bkp('md') {
+    padding: 0;
+
+    .wp-block-column {
+      padding: 0 15px;
+    }
+  }
+}

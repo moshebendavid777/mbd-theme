@@ -1,0 +1,47 @@
+.wbx__accordion {
+  &__item {
+    background: #fff;
+    box-shadow: 1px 1px 11px #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+    &.active {
+      .wbx__accordion__item__content {
+        padding: 0 14px 10px 14px;
+        max-height: 1000px; /* Adjust to a value larger than expected content */
+      }
+    }
+
+    &__title {
+      font-size: 18px !important;
+      font-weight: 700 !important;
+      padding: 13px 30px 10px 14px;
+      margin: 0 !important;
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        content: '+';
+        position: absolute;
+        right: 16px;
+        top: 20%;
+
+        @include bkp('sm') {
+          top: 38%;
+        }
+
+        @include bkp('md') {
+          top: 38%;
+        }
+      }
+    }
+
+    &__content {
+      padding: 0 14px 0 14px;
+      background: #fff;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out; /* Add transition */
+    }
+  }
+}

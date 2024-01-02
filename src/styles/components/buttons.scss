@@ -1,0 +1,63 @@
+.wp-block-button {
+  background: none;
+  transition: 300ms ease-in;
+
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 20px !important;
+    text-transform: uppercase;
+    background:  $color-1;
+    color: #000 !important;
+    border-radius: 2px !important;
+    border: 4px solid $color-1;
+    letter-spacing: 1.5px;
+    transition: 300ms ease-in;
+  }
+
+  &:hover {
+    .wp-block-button__link {
+      background: $color-2 !important;
+    }
+  }
+
+  &.is-style-fill {
+    &:hover {
+      .wp-block-button__link {
+        border-color: $color-2 !important;
+      }
+    }
+  }
+
+  &.is-style-outline {
+    background: none;
+    position: relative;
+
+    .wp-block-button__link {
+      color: #000;
+      border: 4px solid $color-1;
+      border-radius: 0 !important;
+    }
+  }
+}
+
+.gform_button {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 20px !important;
+  text-transform: uppercase;
+  background:  $color-1;
+  color: #000 !important;
+  border-radius: 2px !important;
+  border: 4px solid $color-1;
+  letter-spacing: 1.5px;
+  transition: 300ms ease-in;
+  height: auto;
+  display: block;
+  width: 100%;
+
+  &:hover {
+    border-color: $color-2 !important;
+    background: $color-2 !important;
+  }
+}

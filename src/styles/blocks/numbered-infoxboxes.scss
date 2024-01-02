@@ -1,0 +1,63 @@
+.wbix__numbered-infoboxes {
+  &__media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    @include bkp('md') {
+      margin: 0 auto !important;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+
+    @include bkp('md') {
+      margin: 0 auto 1rem 0 !important;
+    }
+
+    &__bullet {
+      width: 55px;
+      height: 45px;
+      border-radius: 100%;
+      background: rgba($color-1, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+
+      span {
+        background: $color-1;
+        border: 5px solid #f0ce71;
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+      }
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+
+      &__title {
+        font-weight: 700;
+        margin-top: 10px !important;
+        margin-bottom: 0 !important;
+      }
+
+      &__content {
+        font-size: 12px;
+      }
+    }
+  }
+}

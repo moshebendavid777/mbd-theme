@@ -1,0 +1,31 @@
+.wbx__content-icon {
+  &__media {
+    display: flex;
+    justify-content: center;
+
+    &--icon {
+      width: 80px !important;
+      height: 80px !important;
+
+      img {
+        object-position: center center;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    &__title {
+      text-align: center;
+      font-size: 18px !important;
+      line-height: 22px !important;
+      letter-spacing: 0.5px !important;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+  }
+}

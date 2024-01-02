@@ -1,0 +1,112 @@
+.page {
+  &:is(.page-id-2) {
+    .page-header {
+      margin-bottom: 0 !important;
+
+      @include bkp('md') {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  &:not(.home) {
+    .page-header {
+        margin-bottom: 5.5rem;
+
+        @include bkp('md') {
+          margin-bottom: 2.5rem;
+        }
+    }
+  }
+}
+
+.page-header {
+  padding: 20px;
+  background: $color-2;
+  position: relative;
+
+  &.has-icon {
+    margin-bottom: 50px;
+  }
+
+  .page-header__media {
+    background: $white;
+    padding: 20px;
+    border-radius: 100%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: 0 3px 5px #ececec;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 900;
+    margin: 10px 0 25px 0 !important;
+    padding-bottom: 20px;
+    position: relative;
+    color: #000  !important;
+    text-align: center;
+  }
+}
+
+.page-content {
+  padding: 0;
+
+  >.wp-block-heading {
+    padding: 0 15px;
+  }
+}
+
+.is-two-columns-list {
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  padding: 0;
+  margin: 0;
+  color: #666;
+  width: fit-content
+}
+
+.is-two-columns-list li {
+  list-style: none;
+  display: flex;
+  align-items: center
+}
+
+.is-two-columns-list li::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' id='Layer_1' x='0' y='0' style='enable-background:new 0 0 255.79 191.2;' version='1.1' viewBox='0 0 255.79 191.2'%3E%3Cstyle%3E .st0%7Bfill:%23ce2027;%7D %3C/style%3E%3Cpath d='M0 96.19c7.92-7.39 15.68-14.6 23.4-21.85 3.81-3.57 7.63-7.14 11.28-10.87 1.42-1.44 2.23-1.13 3.4.15 5.96 6.54 11.94 13.06 17.99 19.52C60.66 88.04 65.4 92.8 70 97.7c7.2 7.66 14.33 15.38 21.57 23.16 2.98-2.75 5.82-5.36 8.64-7.98 7.04-6.53 14.09-13.04 21.1-19.59 7.87-7.34 15.69-14.74 23.56-22.08 9.2-8.57 18.43-17.11 27.65-25.67 6.8-6.3 13.58-12.61 20.4-18.9 9.6-8.86 19.22-17.7 28.94-26.64 11.24 12.18 22.54 24.43 33.91 36.75-5.66 5.14-11.29 10.24-16.9 15.37-2.44 2.23-4.85 4.5-7.26 6.76-8.33 7.81-16.64 15.65-24.99 23.44-6.65 6.21-13.34 12.37-20.01 18.55-6.98 6.47-13.95 12.94-20.93 19.4l-20.02 18.55c-6.98 6.47-13.95 12.94-20.92 19.41-6.73 6.24-13.46 12.49-20.2 18.72-5.1 4.71-10.22 9.39-15.51 14.25C59.39 159.56 29.74 127.92 0 96.19z' class='st0'/%3E%3C/svg%3E%0A");
+  width: 16px;
+  height: 15px;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  margin-right: 6px
+}
+
+.list-map {
+  @include bkp('sm') {
+    column-count: 2;
+    margin-left: 5px;
+  }
+
+  @include bkp('md') {
+    column-count: 2;
+    margin-left: 5px;
+  }
+}
+
+.clear-gap {
+  @include bkp('sm') {
+    gap: 0;
+    padding: 0 !important;
+  }
+
+  @include bkp('md') {
+    gap: 0;
+    padding: 0 !important;
+  }
+}

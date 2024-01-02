@@ -1,0 +1,25 @@
+.object__fit {
+  $positions-x: left, center, right;
+  $positions-y: top, center, bottom;
+
+  &--cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &--contain {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+[class*="object__fit"] {
+  width: 100%;
+  height: 100%;
+}
+
+:where(.wp-block-columns) {
+  margin-bottom: 0;
+}

@@ -1,0 +1,23 @@
+/// Mixin to manage responsive breakpoints
+/// @author Moshe Ben-David
+/// @param {String} $bkp- Breakpoint size
+/// @require $breakpoints
+
+$breakpoints: (
+  "sm":  480px,
+  "md":  820px,
+  "lg":  1024px
+) !default;
+
+@mixin bkp($bkp) {
+  @if map-has-key($breakpoints, $bkp) {
+    @media (max-width: map-get($breakpoints, $bkp)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "There is no value from `#{$bkp}`. "
+      + "Breakpoints available: #{map-keys($breakpoints)}.";
+  }
+}

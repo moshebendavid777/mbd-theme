@@ -1,0 +1,233 @@
+.main-header {
+  background-color: $color-2;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+
+  .navbar-nav {
+    width: 100%;
+    align-items: center;
+    margin-left: unset !important;
+  }
+
+  @include bkp('sm') {
+    .col {
+      padding: 0 !important;
+    }
+
+    .navbar-collapse {
+      background: $white;
+      padding: 1rem 20px;
+
+      .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+        &.btn-quote {
+          margin-left: unset !important;
+        }
+
+        .nav-link {
+          font-size: 1rem;
+          padding: 1rem 0;
+        }
+      } 
+    }
+  }
+
+  @include bkp('md') {
+    .col {
+      padding: 0 !important;
+    }
+
+    .navbar-collapse {
+      background: $color-2;
+      padding: 1rem 20px;
+
+      .nav-item {
+        
+        &.btn-quote {
+          margin-left: unset;
+        }
+
+        .nav-link {
+          font-size: 1rem;
+          padding: 1rem 0;
+        }
+      } 
+    }
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .navbar-brand {
+    height: 80px;
+    padding: 0;
+
+    @include bkp('sm') {
+      padding: 0 20px;
+      margin: 0 !important;
+    }
+
+    @include bkp('md') {
+      padding: 0 20px;
+      margin: 0 !important;
+    }
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  .navbar-toggler {
+    border: none !important;
+    border-radius: 0 !important;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .nav-item {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 1rem;
+    cursor: pointer;
+    
+    &:last-child {
+      margin-left: auto;
+
+      &.btn-quote {
+        margin-left: auto;
+        a {
+          transition: 300ms ease-in;
+
+          &:hover {
+            color: $black !important;
+            background: $color-1 !important;
+            border-color: $black !important;
+          }
+        }
+      }
+
+      &:hover  {
+        a {
+          color: $color-1 !important;
+        }
+      }
+    }
+
+    .nav-link {
+      color: $black;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 0;
+      transition: all 300ms ease-in;
+
+        &:hover {
+          color: $color-1;
+        }  
+
+    }
+    
+
+      .nav-item {
+        transition: all 300ms ease-in;
+        
+        &:hover {          
+          .nav-link {
+            color: $color-1;
+          }
+        }
+
+        &:not(.btn-quote) {
+          &:hover {
+            a {
+              color: $color-1;
+            }
+          }  
+        }
+  
+      }
+
+
+    .dropdown-toggle {
+      &::after {
+        display: inline-block;
+        vertical-align: 0%;
+        border: 0;
+        width: 10px;
+        height: 10px;
+        margin-left: .255em;
+        content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path d="M1 5.5a1.5 1.5 0 0 1 2.121 0L8 11.621 12.879 5.5a1.5 1.5 0 1 1 2.122 2.122l-6 6a1.5 1.5 0 0 1-2.122 0l-6-6A1.5 1.5 0 0 1 1 5.5z"/></svg>');
+      }
+    }
+
+    .sub-menu {
+      background: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 1px 1px 5px rgba(73,73,73,.06);
+      width: max-content;
+
+      @include bkp('sm') {
+        box-shadow: none !important;
+        padding: 10px 20px;
+        background: #fff9ef;
+        width: 100%;
+        position: relative;
+      }
+
+      @include bkp('md') {
+        box-shadow: none !important;
+        padding: 10px 20px;
+        background: #fff9ef;
+        width: 100%;
+        position: relative;
+      }
+
+      .nav-item {
+        transition: all 300ms ease-in;
+        padding: 5px 0;
+        
+        &:hover {          
+          .nav-link {
+            color: $color-1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.splide {
+  &__arrow {
+    svg {
+      fill: $white !important;
+    }
+  }
+}
+
+.btn-quote {
+  a {
+    border: 2px solid $color-1;
+    padding: 7px 10px !important;
+  }
+
+  &:hover {
+    a {
+      font-weight: bold;
+    }
+  }
+}

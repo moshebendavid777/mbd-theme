@@ -1,0 +1,75 @@
+.wbix__floating-boxes {
+  margin: 2.5rem 0;
+
+  &__box {
+    position: relative;
+    height: 100%;
+
+    &--title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 10px;
+
+      @include bkp('md') {
+        font-size: 1.3rem;
+      }
+    }
+    &--content {
+      font-size: 12px;
+      margin-bottom: 10px;
+
+      @include bkp('md') {
+        font-size: 1rem;
+      }
+    }
+
+
+    &--left {
+      position: absolute;
+      right: -4rem;
+      text-align: right;
+      bottom: 4rem;
+
+      @include bkp('md') {
+        position: relative;
+        right: unset;
+        bottom: unset;
+        text-align: center;
+      }
+
+      &__media {
+        position: relative;
+        right: -6rem;
+        z-index: 3;
+
+        @include bkp('md') {
+          right: unset;
+        }
+      }
+    }
+
+    &--right {
+      position: absolute;
+      left: -4rem;
+      text-align: left;
+      top: 4rem;
+
+      @include bkp('md') {
+        position: relative;
+        left: unset;
+        bottom: unset;
+        text-align: center;
+      }
+
+      &__media {
+        position: relative;
+        left: -6rem;
+        z-index: 3;
+
+        @include bkp('md') {
+          left: unset;
+        }
+      }
+    }
+  }
+}

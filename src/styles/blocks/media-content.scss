@@ -1,0 +1,23 @@
+.wbx-image-content {
+  padding: 4rem 0;
+
+  &__media {
+    @include bkp('sm') {
+      margin-top: 20px;
+    }
+
+    @include bkp('md') {
+      margin-top: 40px;
+    }
+
+    figure {
+      margin: 0 2em;
+
+      img {
+        border-radius: 25px;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

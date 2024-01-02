@@ -1,0 +1,7 @@
+.wp-block-image {
+  @include bkp('md') {
+    img {
+      height: 100%!important;
+    }
+  }
+}

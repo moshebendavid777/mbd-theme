@@ -1,0 +1,14 @@
+.single-post {
+  .page-header {
+    @include bkp("md") {
+      h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.5 !important;
+      }
+    }
+  }
+}
+
+.wbx__recent-posts {
+  margin-top: 2rem;
+}

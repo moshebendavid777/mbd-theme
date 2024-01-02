@@ -1,0 +1,70 @@
+.wbx__tax-calculator {
+  max-width: 580px;
+  
+  @include bkp('md') {
+    padding: 0 15px;   
+  }
+
+  .results_active {
+    display: flex;
+    flex-direction: column;
+    background: $color-2;
+    border: 2px solid $color-1;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__results {
+    text-align: center;
+
+    &--heading {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 0 !important;
+    }
+
+    &--amount {
+      font-family: $secondary_font;
+      font-size: 2rem;
+      font-weight: 800;
+      color: $color-1;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    input {
+      margin: 10px 0;
+    }
+
+    &__button {
+      font-size: 14px;
+      font-weight: 700;
+      padding: 10px 20px !important;
+      text-transform: uppercase;
+      background: $color-1;
+      color: #000 !important;
+      border-radius: 2px !important;
+      border: 4px solid #f6bb1a;
+      letter-spacing: 1.5px;
+    }
+  }
+}
+
+.resultItem {
+  font-family: $primary_font !important;
+  font-size: 14px;
+  margin: 0 !important;
+
+  span {
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}

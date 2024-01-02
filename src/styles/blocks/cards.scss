@@ -1,0 +1,23 @@
+.wbx__cards {
+  margin-bottom: 20px;
+
+  &__card {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 1px 1px 11px #dedede;
+    margin-bottom: 20px;
+
+    &__media {
+      background-image: linear-gradient(35deg, #083577 15%, #007aff 100%);
+    }
+
+    &__title {
+      font-size: 14px !important;
+      color: $color-2 !important;
+      font-weight: 700 !important;
+      text-align: center;
+      line-height: 28px !important;
+      margin: 8px 0 0 0 !important;
+    }
+  }
+}
